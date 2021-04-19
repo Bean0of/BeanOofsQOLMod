@@ -1,0 +1,8 @@
+displayName = BeanOof's QOL Mod
+author = BeanOof and rNexel
+weakReferences = CalamityMod, Luiafk, MagicStorage
+sortAfter = CalamityMod, Luiafk, MagicStorage
+buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*, lib\*, .git\*
+hideCode = true
+hideResources = true
+version = 0.1
