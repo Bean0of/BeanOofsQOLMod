@@ -1,1 +1,31 @@
-Just a bunch of qol changes that ive wanted over the years.
+Just adds a bunch of changes to the game that ive wanted to make for years.
+
+BeanOofsQOLMod additions so far:
+
+Vanilla Changes:
+Dye trader now sells more dyes
+
+Items:
+DespawnBosses
+Die (kills you instantly when you use it)
+Skip Early Game Bags
+Traveling Merchant Viewer
+
+UnobtainableItems (Cheaty items):
+UltimateEmblem
+UltimateHealth
+
+NPCs:
+Guy That Fixes Things NPC
+
+Recipes:
+Simple Auric Tesla (20 auric ore and yharon soul fragments) (Calamity Mod)
+
+Chat Commands:
+/irltime (displays irl time)
+/wiki (opens vanilla wiki)
+/wiki [calamity/thorium/fargosouls] (opens a modded wiki)
+
+
+Planning to add soon:
+Autosave after killing a boss for the first time
