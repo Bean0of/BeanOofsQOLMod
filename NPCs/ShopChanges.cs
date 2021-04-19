@@ -20,6 +20,8 @@ namespace BeanOofsQOLMod.NPCs
             }
             else if (type == NPCID.DyeTrader)
             {
+                if (ModContent.GetInstance<Features>().ImprovedDyeTrader == false) return;
+
                 SwapPositions(shop.item, 0, 2);
 
                 AddToShop(3560, shop.item, ref nextSlot);

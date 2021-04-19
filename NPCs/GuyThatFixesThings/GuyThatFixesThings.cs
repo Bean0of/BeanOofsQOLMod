@@ -59,7 +59,7 @@ namespace BeanOofsQOLMod.NPCs.GuyThatFixesThings
         public override bool Autoload(ref string name)
         {
             name = "GuyThatFixesThings";
-            return mod.Properties.Autoload;
+            return ModContent.GetInstance<Features>().GuyThatFixesThings;
         }
 
         public override void SetStaticDefaults()

@@ -1,8 +1,10 @@
 displayName = BeanOof's QOL Mod
 author = BeanOof and rNexel
+homepage = https://github.com/Bean0of/BeanOofsQOLMod
 weakReferences = CalamityMod, Luiafk, MagicStorage
 sortAfter = CalamityMod, Luiafk, MagicStorage
 buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*, lib\*, .git\*
+includePDB = true
 hideCode = true
 hideResources = true
 version = 0.1
