@@ -8,7 +8,7 @@ using Terraria.ModLoader.Config;
 
 namespace BeanOofsQOLMod
 {
-    class Features : ModConfig
+    class ConfigServer : ModConfig
     {
         public override ConfigScope Mode => ConfigScope.ServerSide;
 
@@ -21,9 +21,12 @@ namespace BeanOofsQOLMod
         [ReloadRequired]
         [DefaultValue(true)]
         public bool GuyThatFixesThings;
+
+        [DefaultValue(true)]
+        public bool AutoSaveAfterBoss;
     }
 
-    class Debug : ModConfig
+    class ConfigClient : ModConfig
     {
         public override ConfigScope Mode => ConfigScope.ClientSide;
 

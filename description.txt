@@ -1,9 +1,9 @@
-Just adds a bunch of changes to the game that ive wanted to make for years.
-
 BeanOofsQOLMod additions so far:
 
 Vanilla Changes:
 Dye trader now sells more dyes
+Autosaves after killing a boss
+You can now put music boxes into vanity to listen to them
 
 Items:
 DespawnBosses
@@ -25,7 +25,3 @@ Chat Commands:
 /irltime (displays irl time)
 /wiki (opens vanilla wiki)
 /wiki [calamity/thorium/fargosouls] (opens a modded wiki)
-
-
-Planning to add soon:
-Autosave after killing a boss for the first time

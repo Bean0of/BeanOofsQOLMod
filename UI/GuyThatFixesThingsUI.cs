@@ -24,7 +24,7 @@ namespace BeanOofsQOLMod.UI
             {
                 Left = { Pixels = 50 },
                 Top = { Pixels = 270 },
-                ValidItemFunc = item => item.IsAir || !item.IsAir && item.Prefix(-3)
+                ValidItemFunc = item => item.IsAir || !item.IsAir
             };
             // Here we limit the items that can be placed in the slot. We are fine with placing an empty item in or a non-empty item that can be prefixed. Calling Prefix(-3) is the way to know if the item in question can take a prefix or not.
             Append(_vanillaItemSlot);

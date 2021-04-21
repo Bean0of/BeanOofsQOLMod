@@ -1,10 +1,13 @@
-﻿using System;
+﻿using BeanOofsQOLMod.Items.DespawnBosses;
+using BeanOofsQOLMod.Items.Die;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Terraria;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 
 namespace BeanOofsQOLMod.NPCs.GuyThatFixesThings
@@ -43,7 +46,7 @@ namespace BeanOofsQOLMod.NPCs.GuyThatFixesThings
 
         private List<string> goblinExistsMessages = new List<string>()
         {
-            "{0} the Goblin Tinkerer is an asshole.",
+            "{0} the Goblin Tinkerer is an idiot.",
             "If you think you are stupid just think that {0} the Goblin Tinkerer exists.",
             "{0} the Goblin Tinkerer is obese.",
             "Dont fall for {0} the Goblin Tinkerer's scams."
@@ -59,7 +62,7 @@ namespace BeanOofsQOLMod.NPCs.GuyThatFixesThings
         public override bool Autoload(ref string name)
         {
             name = "GuyThatFixesThings";
-            return ModContent.GetInstance<Features>().GuyThatFixesThings;
+            return ModContent.GetInstance<ConfigServer>().GuyThatFixesThings;
         }
 
         public override void SetStaticDefaults()
@@ -113,17 +116,31 @@ namespace BeanOofsQOLMod.NPCs.GuyThatFixesThings
 
         public override void SetChatButtons(ref string button, ref string button2)
         {
-            button = "Fix";
+            button = Language.GetTextValue("LegacyInterface.28");
+            button2 = "Fix";
         }
 
         public override void OnChatButtonClicked(bool firstButton, ref bool shop)
         {
             if (firstButton)
             {
+                shop = true;
+            }
+            else
+            {
                 Main.playerInventory = true;
                 Main.npcChatText = "";
                 ModContent.GetInstance<BeanOofsQOLMod>().GuyThatFixesThingsInterface.SetState(new UI.GuyThatFixesThingsUI());
             }
+        }
+
+        public override void SetupShop(Chest shop, ref int nextSlot)
+        {
+            shop.item[nextSlot].SetDefaults(ModContent.ItemType<Die>());
+            ++nextSlot;
+
+            shop.item[nextSlot].SetDefaults(ModContent.ItemType<DespawnBosses>());
+            ++nextSlot;
         }
     }
 }

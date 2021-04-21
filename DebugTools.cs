@@ -13,7 +13,7 @@ namespace BeanOofsQOLMod
     {
         public override void PostUpdate()
         {
-            if (ModContent.GetInstance<Debug>().ShowInternalItemNames)
+            if (ModContent.GetInstance<ConfigClient>().ShowInternalItemNames)
             {
                 Item item = player.HeldItem;
                 if (item != null && item.modItem != null)

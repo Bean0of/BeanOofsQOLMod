@@ -14,7 +14,7 @@ namespace BeanOofsQOLMod.Items.SkipEarlyGame
     {
         public override void SetupStartInventory(IList<Item> items, bool mediumcoreDeath)
         {
-            if (ModContent.GetInstance<Features>().SkipEarlyGameBag == false) return;
+            if (ModContent.GetInstance<ConfigServer>().SkipEarlyGameBag == false) return;
 
             if (!mediumcoreDeath)
             {

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using BeanOofsQOLMod.Items.SkipEarlyGame;
+using BeanOofsQOLMod.UI;
 using Microsoft.Xna.Framework;
 using MonoMod.Cil;
 using Terraria;
@@ -11,12 +12,18 @@ namespace BeanOofsQOLMod
 	public class BeanOofsQOLMod : Mod
 	{
         internal UserInterface GuyThatFixesThingsInterface;
+        //internal UserInterface MusicSlotInterface;
+        //internal MusicSlotUI MusicSlotUI;
 
         public override void Load()
         {
             if (!Main.dedServ)
             {
                 GuyThatFixesThingsInterface = new UserInterface();
+
+                //MusicSlotInterface = new UserInterface();
+                //MusicSlotUI = new MusicSlotUI();
+                //MusicSlotInterface.SetState(MusicSlotUI);
             }
         }
 
@@ -30,6 +37,7 @@ namespace BeanOofsQOLMod
                     delegate {
                         // If the current UIState of the UserInterface is null, nothing will draw. We don't need to track a separate .visible value.
                         GuyThatFixesThingsInterface.Draw(Main.spriteBatch, new GameTime());
+                        //MusicSlotInterface.Draw(Main.spriteBatch, new GameTime());
                         return true;
                     },
                     InterfaceScaleType.UI)
@@ -40,6 +48,7 @@ namespace BeanOofsQOLMod
         public override void UpdateUI(GameTime gameTime)
         {
             GuyThatFixesThingsInterface?.Update(gameTime);
+            //MusicSlotInterface?.Update(gameTime);
         }
 
         public override void AddRecipeGroups()

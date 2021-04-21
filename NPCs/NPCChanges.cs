@@ -1,4 +1,5 @@
 ﻿using BeanOofsQOLMod.Items.TravelingMerchantViewer;
+using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +11,24 @@ using Terraria.ModLoader;
 
 namespace BeanOofsQOLMod.NPCs
 {
-    class ShopChanges : GlobalNPC
+    class NPCChanges : GlobalNPC
     {
+        public override void NPCLoot(NPC npc)
+        {
+            if (Main.netMode != NetmodeID.MultiplayerClient)
+            {
+                if 
+                (
+                    npc.boss &&
+                    Main.autoSave &&
+                    ModContent.GetInstance<ConfigServer>().AutoSaveAfterBoss
+                )
+                {
+                    WorldGen.saveAndPlay();
+                }
+            }
+        }
+
         public override void SetupShop(int type, Chest shop, ref int nextSlot)
         {
             if (type == NPCID.TravellingMerchant)
@@ -20,7 +37,7 @@ namespace BeanOofsQOLMod.NPCs
             }
             else if (type == NPCID.DyeTrader)
             {
-                if (ModContent.GetInstance<Features>().ImprovedDyeTrader == false) return;
+                if (ModContent.GetInstance<ConfigServer>().ImprovedDyeTrader == false) return;
 
                 SwapPositions(shop.item, 0, 2);
 
