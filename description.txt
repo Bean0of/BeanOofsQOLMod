@@ -4,6 +4,7 @@ Vanilla Changes:
 Dye trader now sells more dyes
 Autosaves after killing a boss
 You can now put music boxes into vanity to listen to them
+The dps meter will now work when in vanity
 
 Items:
 DespawnBosses
@@ -11,7 +12,7 @@ Die (kills you instantly when you use it)
 Skip Early Game Bags
 Traveling Merchant Viewer
 
-UnobtainableItems (Cheaty items):
+UnobtainableItems (You can only get these with cheats):
 UltimateEmblem
 UltimateHealth
 
