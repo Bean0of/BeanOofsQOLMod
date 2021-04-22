@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace BeanOofsQOLMod
@@ -17,10 +18,19 @@ namespace BeanOofsQOLMod
                 Item item = player.armor[n];
                 if (item.Name.Contains("Music Box"))
                 {
-                    bool r = false;
-                    player.VanillaUpdateAccessory(player.whoAmI, item, false, ref r, ref r, ref r);
+                    UpdateAccessory(item);
+                }
+                else if (item.type == ItemID.DPSMeter)
+                {
+                    player.accDreamCatcher = true;
                 }
             }
+        }
+
+        private void UpdateAccessory(Item item)
+        {
+            bool r = false;
+            player.VanillaUpdateAccessory(player.whoAmI, item, false, ref r, ref r, ref r);
         }
     }
 }

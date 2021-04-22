@@ -1,0 +1,3 @@
+﻿This is just a reminder for myself because these method names can be weird
+
+Chat Message = Main.NewText()
