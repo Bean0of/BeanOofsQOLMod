@@ -17,6 +17,8 @@ namespace BeanOofsQOLMod
 
         public override void Load()
         {
+            FKBossBarSupport.SetupBars();
+
             if (!Main.dedServ)
             {
                 GuyThatFixesThingsInterface = new UserInterface();

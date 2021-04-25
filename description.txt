@@ -6,6 +6,9 @@ Autosaves after killing a boss
 You can now put music boxes into vanity to listen to them
 The dps meter will now work when in vanity
 
+Mod Changes:
+Added calamity support to FKBossHealthBar
+
 Items:
 DespawnBosses
 Die (kills you instantly when you use it)
