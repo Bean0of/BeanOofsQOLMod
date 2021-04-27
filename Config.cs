@@ -12,6 +12,12 @@ namespace BeanOofsQOLMod
     {
         public override ConfigScope Mode => ConfigScope.ServerSide;
 
+        [DefaultValue(1f)]
+        [Increment(0.1f)]
+        [DrawTicks]
+        [Range(0.1f, 1f)]
+        public float ReforgePriceMultiplier;
+
         [DefaultValue(true)]
         public bool SkipEarlyGameBag;
 
@@ -22,8 +28,44 @@ namespace BeanOofsQOLMod
         [DefaultValue(true)]
         public bool GuyThatFixesThings;
 
+        [ReloadRequired]
+        [DefaultValue(true)]
+        public bool Miner;
+
         [DefaultValue(true)]
         public bool AutoSaveAfterBoss;
+
+        [ReloadRequired]
+        [DefaultValue(true)]
+        public bool SpawnMeteorButtonHEROsMod;
+
+        [ReloadRequired]
+        [DefaultValue(true)]
+        public bool DespawnBossesItem;
+
+        [ReloadRequired]
+        [DefaultValue(true)]
+        public bool DieItem;
+
+        [ReloadRequired]
+        [DefaultValue(true)]
+        public bool MerchantViewerItem;
+
+        [ReloadRequired]
+        [DefaultValue(true)]
+        public bool MythrilKeyItem;
+
+        [ReloadRequired]
+        [DefaultValue(true)]
+        public bool UnobtainableItems;
+
+        [ReloadRequired]
+        [DefaultValue(true)]
+        public bool SimpleAuricTeslaRecipe;
+
+        [ReloadRequired]
+        [DefaultValue(true)]
+        public bool AncientManipulatorRecipe;
     }
 
     class ConfigClient : ModConfig
@@ -32,5 +74,23 @@ namespace BeanOofsQOLMod
 
         [DefaultValue(false)]
         public bool ShowInternalItemNames;
+
+        [ReloadRequired]
+        [DefaultValue(true)]
+        public bool YetAnotherBossHealthBarCalamitySupport;
+
+        [DefaultValue(true)]
+        public bool MusicBoxWorksInVanity;
+
+        [DefaultValue(true)]
+        public bool InfoAccessoryWorksInVanity;
+
+        [ReloadRequired]
+        [DefaultValue(true)]
+        public bool IrlTimeCommand;
+
+        [ReloadRequired]
+        [DefaultValue(true)]
+        public bool WikiCommand;
     }
 }

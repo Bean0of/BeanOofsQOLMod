@@ -11,6 +11,11 @@ namespace BeanOofsQOLMod.Items.UnobtainableItems.UltimateEmblem
 {
     class UltimateEmblem : ModItem
     {
+        public override bool Autoload(ref string name)
+        {
+            return ModContent.GetInstance<ConfigServer>().UnobtainableItems;
+        }
+
         public override void SetStaticDefaults()
         {
             Tooltip.SetDefault("1000000x more damage\nUnobtainable");

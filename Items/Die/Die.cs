@@ -12,6 +12,11 @@ namespace BeanOofsQOLMod.Items.Die
 {
     class Die : ModItem
     {
+        public override bool Autoload(ref string name)
+        {
+            return ModContent.GetInstance<ConfigServer>().DieItem;
+        }
+
         public override void SetStaticDefaults()
         {
             Tooltip.SetDefault("I recommend not using this in a hardcore world.");

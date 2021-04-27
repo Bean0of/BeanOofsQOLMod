@@ -16,21 +16,21 @@ namespace BeanOofsQOLMod
             for (int n = 13; n < 18 + player.extraAccessorySlots; n++)
             {
                 Item item = player.armor[n];
-                if (item.Name.Contains("Music Box"))
+                if (item.Name.Contains("Music Box") && ModContent.GetInstance<ConfigClient>().MusicBoxWorksInVanity)
                 {
                     UpdateAccessory(item);
                 }
-                else if (item.type == ItemID.DPSMeter)
+                else if (BeanOofsUtils.IsPartOfPDA(item) && ModContent.GetInstance<ConfigClient>().InfoAccessoryWorksInVanity)
                 {
-                    player.accDreamCatcher = true;
+                    player.VanillaUpdateInventory(item);
                 }
             }
         }
 
         private void UpdateAccessory(Item item)
         {
-            bool r = false;
-            player.VanillaUpdateAccessory(player.whoAmI, item, false, ref r, ref r, ref r);
+            bool idkwhattheflagsare = false;
+            player.VanillaUpdateAccessory(player.whoAmI, item, false, ref idkwhattheflagsare, ref idkwhattheflagsare, ref idkwhattheflagsare);
         }
     }
 }

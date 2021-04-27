@@ -12,6 +12,11 @@ namespace BeanOofsQOLMod.Items.TravelingMerchantViewer
 {
     class TravelingMerchantViewer : ModItem
     {
+        public override bool Autoload(ref string name)
+        {
+            return ModContent.GetInstance<ConfigServer>().MerchantViewerItem;
+        }
+
         public override void SetStaticDefaults()
         {
             Tooltip.SetDefault("Allows you to see what a traveling merchant has anywhere.");

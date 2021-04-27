@@ -29,6 +29,11 @@ namespace BeanOofsQOLMod
             }
         }
 
+        public override void PostSetupContent()
+        {
+            HEROsModExtensions.Setup(this);
+        }
+
         public override void ModifyInterfaceLayers(List<GameInterfaceLayer> layers)
         {
             int inventoryIndex = layers.FindIndex(layer => layer.Name.Equals("Vanilla: Inventory"));

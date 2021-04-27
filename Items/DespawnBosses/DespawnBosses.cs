@@ -12,6 +12,11 @@ namespace BeanOofsQOLMod.Items.DespawnBosses
 {
     class DespawnBosses : ModItem
     {
+        public override bool Autoload(ref string name)
+        {
+            return ModContent.GetInstance<ConfigServer>().DespawnBossesItem;
+        }
+
         public override void SetStaticDefaults()
         {
             Tooltip.SetDefault("Despawns bosses NOT kill them");

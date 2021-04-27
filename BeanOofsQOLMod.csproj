@@ -16,4 +16,9 @@
   <ItemGroup>
     <Folder Include="Projectiles\" />
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="CalamityMod">
+      <HintPath>..\..\..\..\..\..\..\..\misc\downloads\CalamityMod\CalamityMod.FNA.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>

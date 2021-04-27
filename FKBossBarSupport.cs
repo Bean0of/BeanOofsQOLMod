@@ -10,7 +10,7 @@ namespace BeanOofsQOLMod
             if (yabhb != null)
             {
                 #region Calamity
-                if (BeanOofsUtils.CalamityInstalled)
+                if (BeanOofsUtils.CalamityInstalled && ModContent.GetInstance<ConfigClient>().YetAnotherBossHealthBarCalamitySupport)
                 {
                     #region SCal
                     yabhb.Call("RegisterHealthBarMini", BeanOofsUtils.CalamityMod.GetNPC("CalamitasRun").npc.type);

@@ -7,4 +7,4 @@ buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*, lib\*, .git\*
 includePDB = true
 hideCode = true
 hideResources = true
-version = 0.1
+version = 1.0.0
