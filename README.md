@@ -1,5 +1,4 @@
 # BeanOofsQOLMod additions so far:
-
 ## Every single feature/change is toggleable!
 
 Vanilla Changes:
